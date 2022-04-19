@@ -1,0 +1,7 @@
+import remiseras.*
+
+test "precio kilometro ludmila" {
+
+	assert.equals(18,ludmila.precioKilometro())
+
+}
