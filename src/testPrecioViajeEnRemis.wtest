@@ -1,0 +1,61 @@
+import remiseras.*
+
+test "precio viajes de 10 km de varias clientas con roxana" {
+
+	assert.equals(180,roxana.precioViaje(10,ludmila))
+	assert.equals(300,roxana.precioViaje(10,anaMaria))/*ANA MARIA CON UNA ECONOMIA ESTABLE */
+	anaMaria.cambiarEstadoEconomico()
+	assert.equals(250,roxana.precioViaje(10,anaMaria))/*ANA MARIA CON UNA ECONOMIA NO ESTABLE */
+	assert.equals(220,roxana.precioViaje(10,teresa))
+
+}
+
+test "precio viajes de 10 km de varias clientas con gabriela" {
+
+	assert.equals(216,gabriela.precioViaje(10,ludmila))
+	assert.equals(360,gabriela.precioViaje(10,anaMaria))/*ANA MARIA CON UNA ECONOMIA ESTABLE */
+	anaMaria.cambiarEstadoEconomico()
+	assert.equals(300,gabriela.precioViaje(10,anaMaria))/*ANA MARIA CON UNA ECONOMIA NO ESTABLE */
+	assert.equals(264,gabriela.precioViaje(10,teresa))
+
+}
+
+test "precio viajes de 10 km de varias clientas con mariela" {
+
+	assert.equals(180,mariela.precioViaje(10,ludmila))
+	assert.equals(300,mariela.precioViaje(10,anaMaria))/*ANA MARIA CON UNA ECONOMIA ESTABLE */
+	anaMaria.cambiarEstadoEconomico()
+	assert.equals(250,mariela.precioViaje(10,anaMaria))/*ANA MARIA CON UNA ECONOMIA NO ESTABLE */
+	assert.equals(220,mariela.precioViaje(10,teresa))
+
+}
+
+test "precio viajes de 1 km de varias clientas con mariela"{
+	
+	assert.equals(50,mariela.precioViaje(1,ludmila))
+	assert.equals(50,mariela.precioViaje(1,anaMaria))/*ANA MARIA CON UNA ECONOMIA ESTABLE */
+	anaMaria.cambiarEstadoEconomico()
+	assert.equals(50,mariela.precioViaje(1,anaMaria))/*ANA MARIA CON UNA ECONOMIA NO ESTABLE */
+	assert.equals(50,mariela.precioViaje(1,teresa))
+	
+}
+
+test "precio viajes de 10 km de varias clientas con juana" {
+
+	assert.equals(200,juana.precioViaje(10,ludmila))
+	assert.equals(200,juana.precioViaje(10,anaMaria))/*ANA MARIA CON UNA ECONOMIA ESTABLE */
+	anaMaria.cambiarEstadoEconomico()
+	assert.equals(200,juana.precioViaje(10,anaMaria))/*ANA MARIA CON UNA ECONOMIA NO ESTABLE */
+	assert.equals(200,juana.precioViaje(10,teresa))
+
+}
+
+test "precio viajes de 5 km de varias clientas con juana" {
+
+	assert.equals(100,juana.precioViaje(5,ludmila))
+	assert.equals(100,juana.precioViaje(5,anaMaria))/*ANA MARIA CON UNA ECONOMIA ESTABLE */
+	anaMaria.cambiarEstadoEconomico()
+	assert.equals(100,juana.precioViaje(5,anaMaria))/*ANA MARIA CON UNA ECONOMIA NO ESTABLE */
+	assert.equals(100,juana.precioViaje(5,teresa))
+
+}
