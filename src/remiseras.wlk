@@ -35,6 +35,17 @@ object teresa {
 	}
 }
 
+object melina {
+	var clienta 
+	
+	method trabajaPara(clientaContrata){
+		clienta = clientaContrata
+	}
+	
+	method precioKilometro() = (clienta.precioKilometro()-3)
+
+}
+
 /*REMISERAS */
 
 object roxana{
@@ -61,13 +72,23 @@ object mariela{
 
 object juana{
 	
-	method precioViaje(kms,clientes){
+	method precioViaje(kms,cliente){
 		if(kms<=8){ return 100}
 		else {return 200}
 	}
 }
 
-
+object lucia{
+	var remplazo
+	
+	method esRemplazo(remisera){
+		remplazo = remisera
+	}
+	
+	method precioViaje(kms,cliente){
+		return remplazo.precioViaje(kms,cliente)
+	}
+}
 
 
 
