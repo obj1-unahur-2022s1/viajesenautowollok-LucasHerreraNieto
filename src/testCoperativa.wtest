@@ -1,0 +1,34 @@
+import oficinaDeLaCoperativa.*
+import remiseras.*
+
+test "asignacion de remiseras en primer y segundo lugar(remisera1 = roxana, remisera2 = juana)" {
+
+	coperativa.asignarRemiseras(roxana, juana)
+	assert.equals(roxana,coperativa.remiseraPrimerLugar())
+	assert.equals(juana,coperativa.remiseraSegundoLugar())
+}
+
+test "cambiar a la remisera del primer lugar" {
+	
+	coperativa.cambiarPrimeraRemiseraPor(mariela)
+	assert.equals(mariela,coperativa.remiseraPrimerLugar())
+}
+
+test "cambiar a la remisera del segundo lugar" {
+	
+	coperativa.cambiarSegundaRemiseraPor(gabriela)
+	assert.equals(gabriela,coperativa.remiseraSegundoLugar())
+}
+
+test "intercambiar remiseras de lugar "{
+	
+	coperativa.asignarRemiseras(roxana, juana)
+	coperativa.intercambiarRemiseras()
+	assert.equals(juana,coperativa.remiseraPrimerLugar())
+	assert.equals(roxana,coperativa.remiseraSegundoLugar())
+}
+
+test "mejor eleccion de remisera para viaje de 10km con remisera1 = gabriela y remisera2 = roxana"{
+	coperativa.asignarRemiseras(gabriela, roxana)
+	assert.equals(roxana,coperativa.remiseraElegidaParaViaje(ludmila,10))
+}
