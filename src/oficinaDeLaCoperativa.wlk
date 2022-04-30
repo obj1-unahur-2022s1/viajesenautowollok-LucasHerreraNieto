@@ -22,11 +22,10 @@ object coperativa {
 	}
 	
 	method intercambiarRemiseras(){
-		var auxiliar
-		
-		auxiliar = remiseraPrimerLugar
-		remiseraPrimerLugar = remiseraSegundoLugar
-		remiseraSegundoLugar = auxiliar
+		/*
+		 * Aca podias usar el método asignarRemiseras(r2,r1)
+		 */
+		self.asignarRemiseras(remiseraSegundoLugar, remiseraPrimerLugar)
 	}
 	
 	method remiseraElegidaParaViaje(cliente,kms){

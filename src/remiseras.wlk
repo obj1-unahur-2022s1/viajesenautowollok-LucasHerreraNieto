@@ -8,19 +8,14 @@
  
  object anaMaria{
  	var estaEcomicamenteEstable = true
- 	
- 	method precioKilometro(){
- 		if(estaEcomicamenteEstable){
- 			return 30
- 		}
- 		else{
-			return 25
- 		}
- 	}
+ 	/*Otro forma de escribir el mismo código de manera mas sintética */
+ 	method precioKilometro() = if(estaEcomicamenteEstable){30}else{25}
+ 		
  	
  	method estadoEconomico() = estaEcomicamenteEstable
  	
  	method cambiarEstadoEconomico(){
+ 		/*Muy bien alternando true a false y viceversa */
  		estaEcomicamenteEstable = !estaEcomicamenteEstable
  	}
  }
@@ -63,7 +58,7 @@ object gabriela{
 }
 
 object mariela{
-	
+	/* Mul bien utilizando el max() */
 	method precioViaje(kms,cliente){
 		return 50.max(kms*cliente.precioKilometro())
 		
